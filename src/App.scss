@@ -1,0 +1,147 @@
+*{
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: Segoe UI;
+
+  .home {
+    display: flex;
+    min-height: 100vh;
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      background: black;
+      padding: 8vh 8vw;
+      color: #fff;
+
+      .logo{
+        width: 302px;
+        height: 169px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background: url("images/logo.png");
+      }
+
+      #check, .three-lines{
+        display: none;
+      }
+
+      ul{
+        list-style-type: none;
+      }
+
+      &-list-items {
+        line-height: 34px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 24px;
+      }
+
+      .contact-icons img:not(:nth-of-type(1)), .languages span {
+        margin-left: 20px;
+      }
+      
+    }
+
+    .cover-page{
+      width: 68.2%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      background: url("images/cover-page.png");
+      background-size: cover;
+      padding: 0 45px 45px 0;
+
+      .prt-btn{
+        border: none;
+        background: rgb(20, 117, 162, 0.6);
+        padding: 18px 46px 18px 21px;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+      
+        span{
+          width: 25px;
+          height: 12px;
+          background: url("images/arrow.png");
+          background-size: contain;
+        }
+      }
+
+      .prt-btn:hover{
+        background: rgba(20, 117, 162, 0.3);
+      }
+    }
+  }
+}
+
+
+@media (max-width: 767px){
+  .home{
+    display: block !important;
+    min-height: none !important;
+
+    .sidebar{
+      width: 100%;
+      flex-direction: row !important;
+      padding: 10px !important;
+      background: #fff !important;
+      position: relative;
+      height: max-content;
+      
+      .logo{
+        width: 111px !important;
+        height: 60px !important;
+        background: url("images/logo2.png") !important;
+        background-repeat: no-repeat !important;
+        background-size: cover;
+      }
+
+      nav{
+        display: none;
+        position: absolute;
+        right: 1.3%;
+        top: 74%;
+      }
+
+      .three-lines{
+        display: block !important;
+      }
+
+      #check:checked ~ nav{
+        display: block;
+        background: #1475A2;
+        padding: 131px 10px;
+        text-align: center;
+
+        .sidebar-list-items{
+          padding-bottom: 20px;
+        }
+        
+      }
+      .contacts-lang{
+        display: none;
+      }
+    }
+
+    .cover-page{
+      width: 100% !important;
+      height: 59vh;
+      padding: 0  !important;
+
+      .prt-btn{
+        display: none;
+      }
+    }
+  }
+}
+
+
