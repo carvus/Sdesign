@@ -1,7 +1,8 @@
 import React from 'react';
+import '../css/home.scss';
 import Sidebar from './Sidebar';
 import CoverPage from './CoverPage';
-import Services from './Services/Services.jsx';
+import Services from './OurServices/OurServices.jsx';
 import About from './About/About.jsx';
 import Footer from './Footer/Footer';
 

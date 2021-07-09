@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import '../../css/about.scss';
 
 export default function About() {
     return (
