@@ -1,0 +1,37 @@
+.our-services{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     
+    .heading {
+        text-align: center;
+        letter-spacing: 0.1em;
+
+        h2 {
+            color: #373435;
+        }
+
+        h3 {
+            color: #1475a2;
+        }
+    }
+    .we-are-doing{
+        padding: 30px  30px 120px 30px;
+        display: grid;
+        grid-gap: 0 3.5vw;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .our-services{
+        padding: 45px 0 !important;        
+        .we-are-doing{
+            display: flex !important;
+            align-items: flex-end;
+            flex-direction: column;
+            padding: 45px 0 !important;
+        }
+    }   
+}

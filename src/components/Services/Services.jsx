@@ -1,10 +1,14 @@
 import React from 'react';
-import Sidebar from '../Home/Sidebar';
+import Header from '../Header/Header';
+import Footer from '../Home/Footer/Footer';
+import OurWorks from './OurWorks';
 
 export default function Services() {
     return (
         <div className="recomend-services">
-            <Sidebar/>
+            <Header/>
+            <OurWorks/>
+            <Footer/>
         </div>
     )
 }
