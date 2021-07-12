@@ -12,7 +12,7 @@
     height: 169px;
     background-size: cover;
     background-repeat: no-repeat;
-    background: url("../../images/logos/logo.png");
+    background: url("../../../images/logos/logo.png");
   }
 
   #check,
@@ -42,7 +42,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .sidebar {
     width: 100%;
     flex-direction: row !important;
@@ -54,7 +54,7 @@
     .logo {
       width: 111px !important;
       height: 60px !important;
-      background: url("../../images/logos/logo2.png") !important;
+      background: url("../../../images/logos/logo2.png") !important;
       background-repeat: no-repeat !important;
       background-size: cover;
     }

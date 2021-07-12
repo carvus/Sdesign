@@ -1,6 +1,6 @@
 import React from 'react';
 import Service from './Service';
-import '../css/ourworks.scss';
+import '../css/services/ourworks.scss';
 
 export default function OurWorks() {
     const data = [

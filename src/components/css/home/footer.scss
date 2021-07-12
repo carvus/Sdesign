@@ -5,6 +5,7 @@
     align-items: flex-start;
     background: #1475a2;
     color: #fff;
+    letter-spacing: 0.2em;
     padding: 30px;
 
     .our-works div {
@@ -46,14 +47,14 @@
         display: grid;
         grid-template-columns: 1fr 0.9fr;
         grid-gap: 30px 0;
-        list-style: url("../../images/list-arrow.png");
+        list-style: url("../../../images/list-arrow.png");
     }
 }
 
 @media (max-width: 1330px) {
     .footer {
         flex-direction: column;
-        font-size: 10px;
+        font-size: 12px;
         align-items: center !important;
 
         .our-works {
@@ -62,9 +63,15 @@
     }
 }
 
+@media (max-width: 768px) {
+    .footer{
+        font-size: 8px;
+    }
+}
+
 @media (max-width: 375px) {
     .footer {
-        font-size: 10px !important;
+        font-size: 6.5px !important;
 
         .contact-info {
             justify-content: center !important;

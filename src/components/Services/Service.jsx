@@ -1,12 +1,12 @@
 import React from 'react';
-import '../css/service.scss';
+import '../css/services/service.scss';
 
 export default function Service({ data }) {
     const right = {
-        transform: "translate(3vw, -15vh)",
+        transform: "translate(3vw, -20vh)",
     }
     const left = {
-        transform: "translate(-3vw, -15vh)",
+        transform: "translate(-3vw, -20vh)",
     }
     return (
         <div className="service">
@@ -16,10 +16,10 @@ export default function Service({ data }) {
                 <p style={{ textAlign: data.align }}>{data.subTitle}</p>
                 <p style={{ textAlign: data.align, marginTop: "30px" }}>{data.weAreDoing}</p>
                 <ul style={{ listStyle: !(data.align === "left") ? `url(images/serviceImages/left-arr.png)` : `url(images/serviceImages/right-arr.png)` }}>
-                    {data.services.map((el, i) => <li style={{ textAlign: data.align }} key={i}>{el}</li>)}
+                    {data.services.map((el, i) => <li style={{ textAlign: data.align, direction: data.align === "right" && "rtl" }} key={i}>{el}</li>)}
                 </ul>
             </div>
-            <button style={data.align === "right" ? { transform: "translate(-3vw, -13vh)" } : { transform: "translate( 585px , -13vh)" } } className="seemore-btn">ԾԱՆՈԹԱՆԱԼ <span>→</span></button>
+            <button style={data.align === "right" ? { transform: "translate(-3vw, -17vh)" } : { transform: "translate( 585px , -17vh)" } } className="seemore-btn">ԾԱՆՈԹԱՆԱԼ <span>→</span></button>
         </div>
     )
 }

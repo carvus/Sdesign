@@ -54,15 +54,27 @@
     }
 }
 
-@media (max-width: 767px) {
-    .header{
-        &-logo{
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 10px;
+        &-logo {
             width: 106px;
             height: 60px;
         }
-        nav{
-            right: 22% !important;
+        nav {
+            right: 4% !important;
             top: 68% !important;
+        }
+        .languages {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .header {
+        nav {
+            right: 8% !important;
         }
     }
 }

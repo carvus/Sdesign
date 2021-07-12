@@ -1,10 +1,10 @@
 import React from 'react';
-import '../../css/footer.scss';
+import '../../css/home/footer.scss';
 
 export default function Footer() {
     return (
         <div className="footer">
-            <div className="contacts">
+            <div className="footer-contacts">
                 <div className="contact-info">
                     <p>ՀՀ,0033 ք, Երևան Գյուլբենկյան 31</p>
                     <img src="images/home/icons/footer-icons/location.png" alt="" />

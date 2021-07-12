@@ -1,0 +1,136 @@
+.service {
+    display: flex;
+    flex-direction: column;
+
+    .seemore-btn {
+        padding: 10px 25px;
+        font-size: 18px;
+        background: none;
+        border: 1px solid;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 400;
+        width: max-content;
+
+        span {
+            font-weight: 600;
+            font-size: 24px;
+        }
+    }
+
+    .seemore-btn:hover {
+        color: #fff;
+        border: none;
+        background: #1475a2;
+    }
+
+    .description {
+        width: 722px;
+        height: 390px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        background-color: rgba($color: #fff, $alpha: 0.6);
+        padding: 28px;
+        text-align: center;
+
+        p {
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        li {
+            margin-top: 4.3px;
+            font-weight: 600;
+        }
+    }
+}
+
+.service {
+    &:last-of-type {
+        .description {
+            p,
+            li {
+                line-height: 28px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .service {
+        height: 51vh !important;
+        .description {
+            max-width: 75vw;
+            transform: translate(-5vw, -30vh) !important;
+
+            p,
+            li {
+                font-size: 14px;
+                text-align: right !important;
+            }
+            li {
+                direction: rtl;
+            }
+            ul {
+                list-style: url("../../../images/left-arr.png") !important;
+            }
+        }
+
+        .seemore-btn {
+            padding: 2px 12px;
+            font-size: 14px;
+            transform: translate(-12vw, -28vh) !important;
+        }
+    }
+
+    .service:nth-of-type(1) {
+        margin-bottom: 40px !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .service {
+        height: 45vh !important;
+
+        img {
+            width: 100%;
+            align-self: flex-end !important;
+        }
+
+        .description {
+            max-width: 92vw;
+            padding: 5px 17px 20px 8px !important;
+            transform: translate(-2vw, -23.8vh) !important;
+
+            h2 {
+                font-size: 12px;
+            }
+            p,
+            li {
+                font-size: 9px !important;
+                font-weight: 600;
+            }
+        }
+        .seemore-btn {
+            border: none;
+            font-size: 19px;
+            transform: translate(-5vw, -22vh) !important;
+        }
+        .seemore-btn:hover {
+            color: #1475a2;
+            background: none;
+        }
+    }
+    .service:nth-of-type(1) {
+        margin-bottom: 35px !important;
+    }
+    .service {
+        &:last-of-type {
+            .description {
+                p,
+                li {
+                    line-height: 15px;
+                }
+            }
+        }
+    }
+}
