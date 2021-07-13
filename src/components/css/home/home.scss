@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+#portalInApp{
+  height: 100vh;
+  position: relative;
+}
 .home {
   display: flex;
   min-height: 100vh;
@@ -82,7 +86,7 @@
     justify-content: space-between;
 
     .des-service img {
-      width: 10vw;
+      width: 18vw;
     }
 
     .des-service p {

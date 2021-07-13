@@ -1,0 +1,40 @@
+.gallery-modal-wrapper{
+    min-width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.9);
+
+    .close-modal-btn{
+        position: fixed;
+        right: 6vw;
+        top: 10vh;
+        cursor: pointer;
+    }
+
+    .modal{
+        width: 63%;
+        height: 199.4vh;
+        padding: 15vh 0 0;
+
+        img{
+            height: 80%;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .modal{
+        padding-top: 9vh !important;
+        height: 204.4vh !important;
+
+        img{
+            height: 87% !important;
+        }
+    }
+}

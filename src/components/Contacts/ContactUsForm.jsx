@@ -23,7 +23,7 @@ export default function ContactUsForm() {
                         onInput={(e)=>setUserEmail(e.target.value)}
                     />
                 </div>
-                <textarea name="" id="" cols="71" rows="10"></textarea>
+                <textarea name="" id="" rows="10"></textarea>
                 <button className="submit-btn">Ուղղարկել<span> →</span></button>
             </form>
         </div>
