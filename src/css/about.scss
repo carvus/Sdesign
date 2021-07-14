@@ -1,6 +1,6 @@
 .about {
     display: flex;
-    height: 77vh;
+    height: 70vh;
     justify-content: flex-end;
     align-items: center;
     background: url("../images/about/about.png");
@@ -8,11 +8,16 @@
 
     &-us-text {
         padding: 20px;
-        text-align: center;
         background-color: rgba(20, 117, 162, 0.1);
+        width: 48vw;
+
+        h2 {
+            text-align: center;
+        }
 
         p {
             margin-top: 20px;
+            text-align: justify;
         }
     }
 }
@@ -20,10 +25,11 @@
 @media (max-width: 768px) {
     .about {
         background-position: 10% !important;
-        min-height: 34vh !important;
+        min-height: 337px;
+        height: unset;
 
         &-us-text {
-            max-width: 100%;
+            width: 66.6vw;
 
             h2 {
                 font-size: 18px;
@@ -39,12 +45,12 @@
 @media (max-width: 375px) {
     .about {
         justify-content: center !important;
-        height: 40vh !important;
         background-position: 45% !important;
-        height: 20vh !important;
+        min-height: 192px;
+        height: unset;
 
         &-us-text {
-            max-width: 95%;
+            width: 91vw;
             padding: 3px 10px;
 
             h2 {

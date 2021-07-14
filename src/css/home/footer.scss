@@ -1,41 +1,53 @@
 .footer {
-    display: flex;
-    justify-content: space-evenly;
     font-size: 14px;
-    align-items: flex-start;
     background: #1475a2;
     color: #fff;
     letter-spacing: 0.2em;
-    padding: 30px;
+    padding: 45px 0;   
+    overflow: hidden; 
 
-    .our-works div {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        margin-top: 20px;
-
-        p {
-            padding: 10px;
-        }
-
-        img:not(:nth-of-type(1)) {
-            border-right: 1px solid #fff;
-            padding-right: 10px;
-            margin-left: 10px;
-        }
+    &-content{
+        margin: auto;
+        width: min-content;
+        display: grid;
+        grid-template-columns: min-content auto;
+        grid-column-gap: 7vw;
     }
 
-    .contact-info {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .our-works {
+        width: max-content;
 
-        &:not(:nth-of-type(1)) {
-            margin-top: 35px;
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 20px;
+
+            p {
+                padding: 10px;
+            }
+
+            img:not(:nth-of-type(1)) {
+                border-right: 1px solid #fff;
+                padding-right: 10px;
+                margin-left: 10px;
+            }
+        }
+    } 
+
+    .footer-contacts {
+        display: grid;
+        grid-template-columns: max-content 25px auto;
+        grid-template-rows: repeat(4, max-content);
+        grid-column-gap: 20px;
+        grid-row-gap: 30px;
+        
+        > * {
+           display: inline; 
         }
 
-        img {
-            margin: 0 20px;
+        .info-1-column-item { 
+            text-align: right; 
         }
     }
 
@@ -45,8 +57,9 @@
 
     ul {
         display: grid;
-        grid-template-columns: 1fr 0.9fr;
-        grid-gap: 30px 0;
+        grid-template-columns: max-content auto;
+        grid-template-rows: repeat(4, max-content);
+        grid-gap: 28px 24px;
         list-style: url("../../images/list-arrow.png");
     }
 }
@@ -65,7 +78,11 @@
 
 @media (max-width: 768px) {
     .footer{
-        font-size: 8px;
+        font-size: 12px;
+
+        .footer-content {
+            grid-template-columns: max-content;
+        }
     }
 }
 
@@ -77,7 +94,7 @@
             justify-content: center !important;
         }
         ul {
-            font-size: 9px;
+            font-size: 8px;
         }
     }
 }

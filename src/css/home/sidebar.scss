@@ -1,10 +1,10 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  // align-items: center;
+  // justify-content: space-between;
   background: black;
-  padding: 8vh 8vw;
+  padding: 10vh 6vw 0 6vw;
   color: #fff;
 
   .logo {
@@ -42,17 +42,35 @@
   }
 }
 
+@media (min-width: 769px) {
+  .sidebar{
+    .logo {
+      margin-bottom: 24.2vh;
+    }
+
+    nav {
+      margin-bottom: 22.2vh;
+    }
+
+    .contacts-lang {
+      align-self: center;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .sidebar {
     width: 100%;
     flex-direction: row !important;
-    padding: 34px !important;
+    padding: 31px 43px 56px 24px !important;
     background: #fff !important;
     position: relative;
     height: max-content;
+    justify-content: space-between;
+    align-items: center;
 
     .logo {
-      width: 111px !important;
+      width: 106px !important;
       height: 60px !important;
       background: url("../../images/logos/logo2.png") !important;
       background-repeat: no-repeat !important;
