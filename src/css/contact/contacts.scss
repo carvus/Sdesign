@@ -23,10 +23,10 @@
             background: #1475a2;
             width: 35vw;
             font-size: 12px;
-            padding: 5vh 0 3vh 10vw;
+            padding: 5vh 2vw 3vh 12vw;
             color: #fff;
 
-            img{
+            img {
                 width: 0.8vw;
             }
 
@@ -55,29 +55,46 @@
     .contact-methods {
         font-size: 8px !important;
         padding-right: 3vw;
-        margin: 25px 0 !important;
 
-        img{
+        img {
             width: 1vw !important;
         }
     }
 }
 
 @media (max-width: 768px) {
-    iframe{
-        height: 30vh !important;
-    }
-    .mid-content {
-        padding-top: 0 !important;
-        justify-content: flex-start !important;
-    }
-    .contact-methods {
-        font-size: 6px !important;
-        padding-right: 0 !important;
-        padding-bottom: 0 !important;
+    .contacts {
+        .title{
+            font-size: 18px;
+        }
+        iframe {
+            height: 30vh !important;
+        }
+        .mid-content {
+            justify-content: flex-start !important;
+        }
+        .contact-methods {
+            width: 45vw !important;
+            font-size: 6px !important;
+            padding: 5vh 4vw 0 10vw !important;
+            margin: 25px 0 !important;
 
-        img{
-            width: 1.5vw !important;
+            img {
+                width: 1.5vw !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .contacts {
+        .title {
+            text-align: left !important;
+            font-size: 16px;
+            padding-left: 25px;
+        }
+        .mid-content{
+            padding-top: 0 !important;
         }
     }
 }

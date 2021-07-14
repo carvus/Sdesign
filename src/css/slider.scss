@@ -1,4 +1,4 @@
-.awssld__container {
+    .awssld__container {
     padding-bottom: 30vh !important;
 
     .awssld__content {
@@ -25,9 +25,9 @@
     position: unset !important;
 
     button {
-        background: #dadada;
+        background-color: #dadada !important;
     }
-    &--active {
+    .awssld__bullets--active {
         background-color: #1475a2 !important;
         transform: unset !important;
     }
@@ -39,6 +39,9 @@
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 0 1vw;
 
+        .gallery-image{
+            width: 100%;
+        }
         .gallery-image:nth-last-of-type(3){
             display: none;
         }
@@ -51,6 +54,12 @@
 }
 
 @media (max-width: 375px) {
+    .gallery-image{
+        width: 70vw !important;
+    }
+    .gallery-image:nth-last-of-type(2){
+        display: none;
+    }
     .slide {
         .partners-logo {
             width: 45px !important;

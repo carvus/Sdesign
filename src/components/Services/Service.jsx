@@ -1,5 +1,6 @@
 import React from 'react';
-import '../css/services/service.scss';
+import { Link } from 'react-router-dom';
+import '../../css/services/service.scss';
 
 export default function Service({ data }) {
     const right = {
@@ -19,7 +20,7 @@ export default function Service({ data }) {
                     {data.services.map((el, i) => <li style={{ textAlign: data.align, direction: data.align === "right" && "rtl" }} key={i}>{el}</li>)}
                 </ul>
             </div>
-            <button style={data.align === "right" ? { transform: "translate(-3vw, -17vh)" } : { transform: "translate( 585px , -17vh)" } } className="seemore-btn">ԾԱՆՈԹԱՆԱԼ <span>→</span></button>
+            <Link to="/gallery"><button style={data.align === "right" ? { transform: "translate(-3vw, -17vh)" } : { transform: "translate( 585px , -17vh)" } } className="seemore-btn">ԾԱՆՈԹԱՆԱԼ <span>→</span></button></Link>
         </div>
     )
 }

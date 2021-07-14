@@ -1,10 +1,29 @@
-import React, { useState } from 'react';
-import Header from '../Header/Header';
-import Footer from '../Home/Footer/Footer';
-import GalleryModal from './GalleryModal';
+import React, { useEffect, useState } from 'react';
+
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
+import GalleryModal from '../components/Gallery/GalleryModal';
+
+import { url } from '../providers/constants.js';
+import { request } from '../providers/a.lib.js';
+
 import '../css/gallery/gallery.scss';
 
 export default function Gallery() {
+    const [projectsData, setProjectsData] = useState([]);
+    useEffect(() => {
+        getProjects();
+    }, []);
+    async function getProjects() {
+        try {
+            const projects = await request("GET", url + "/projects")
+            setProjectsData(projects)
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
+
     const data = [
         {
             sectionTitle: "ԴԻԶԱՅՆ",
@@ -64,22 +83,31 @@ export default function Gallery() {
                 },
             ],
         }
-    ]
-    const [isOpenModal, setIsOpenModal] = useState(false)
-    const [modalImg, setModalImg] = useState("")
+    ];
+
+    const [isOpenModal, setIsOpenModal] = useState(false);
+    const [modalImg, setModalImg] = useState("");
     function openModal(imgUrl) {
-        setIsOpenModal(true)
-        setModalImg(imgUrl)
+        setIsOpenModal(true);
+        setModalImg(imgUrl);
     }
     return (
         <div className="gallery">
             <Header />
             <div className="gallery-sections">
                 {data.map((el, i) => {
-                    return <div className="section" key={i}>
+                    const sectionClass = `section section${i+1}`
+                    return <div className={sectionClass} key={i}>
                         <h2>{el.sectionTitle}</h2>
                         <div className="gallery-images">
-                            {el.images.map((el, i) => <img onClick={() => openModal(el.modalImage)} src={el.url} key={i} alt=""/>)}
+                            {el.images.map((el, i) =>
+                                <div className="project" key={i}>
+                                    <img src={el.url} alt="" />
+                                    <div className="project-name" onClick={() => openModal(el.modalImage)}>
+                                        <p>Everest</p>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </div>
                 })}

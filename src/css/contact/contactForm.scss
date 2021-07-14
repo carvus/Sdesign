@@ -52,12 +52,23 @@
 }
 
 @media (max-width: 768px) {
-    input,
-    textarea,
-    .submit-btn {
-        border-radius: 5px !important;
-    }
-    .submit-btn {
-        padding: 0.5vh 1vw !important;
+    .contact-form {
+        padding-right: 0px !important;
+        width: 55vw;
+        input{
+            width: 45%;
+        }
+        textarea{
+            width: 94%;
+        }
+        input,
+        textarea,
+        .submit-btn {
+            border-radius: 5px !important;
+        }
+        .submit-btn {
+            padding: 0.5vh 4vw !important;
+            margin-right: 3vw !important;
+        }
     }
 }

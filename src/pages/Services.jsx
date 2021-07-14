@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../Header/Header';
-import Footer from '../Home/Footer/Footer';
-import OurWorks from './OurWorks';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
+import OurWorks from '../components/Services/OurWorks';
 
 export default function Services() {
     return (

@@ -1,8 +1,9 @@
-import Home from './components/Home/Home';
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
-import Services from './components/Services/Services';
-import Contacts from './components/Contacts/Contacts';
-import Gallery from './components/Gallery/Gallery';
+
+import Home from './pages/Home';
+import Services from './pages/Services';
+import Contacts from './pages/Contacts';
+import Gallery from './pages/Gallery';
 
 function App() {
   return (

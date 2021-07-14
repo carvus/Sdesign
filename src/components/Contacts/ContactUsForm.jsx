@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../css/contact/contactForm.scss';
+import '../../css/contact/contactForm.scss';
 
 export default function ContactUsForm() {
     const [userName, setUserName] = useState("")
