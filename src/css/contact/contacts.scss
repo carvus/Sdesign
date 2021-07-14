@@ -8,7 +8,7 @@
         border: 0;
         width: 100%;
         height: 55vh;
-        margin-bottom: 50px;
+        margin-bottom: 75px;
     }
     .mid-content {
         display: flex;
@@ -21,9 +21,9 @@
             flex-direction: column;
             align-items: flex-start;
             background: #1475a2;
-            width: 35vw;
+            width: 33.5vw;
             font-size: 12px;
-            padding: 5vh 2vw 3vh 12vw;
+            padding: 109px 120px 93px 12vw;
             color: #fff;
 
             img {
@@ -76,7 +76,7 @@
         .contact-methods {
             width: 45vw !important;
             font-size: 6px !important;
-            padding: 5vh 4vw 0 10vw !important;
+            padding: 76px 15px 0 10vw !important;
             margin: 25px 0 !important;
 
             img {
@@ -95,6 +95,13 @@
         }
         .mid-content{
             padding-top: 0 !important;
+        }
+        .contact-methods {
+            width: 52vw !important;
+            padding: 29px 15px 0 7vw !important;
+            transform: translateX(-15px);
+            z-index: -1;
+        
         }
     }
 }

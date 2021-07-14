@@ -2,28 +2,33 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 30px;
+    padding: 36px 45px 36px 70px !important;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
     transform: translateX(8vw);
     background: #fff;
+    width: 49.5vw;
 
     .name-mail {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 8px;
+        width: 100%;
+
         input {
             border: 1px solid #aeadb3;
             border-radius: 3px;
-            padding: 1.5vh 6vw 1.5vh 1vw;
+            padding: 9px 0 9px 13px;
             outline: none;
             background: rgba(229, 229, 229, 0.18);
+            width: inherit !important;
         }
-        #useremail {
-            margin-left: 13px;
-        }
+        
     }
 
     textarea {
         outline: none;
         resize: none;
-        margin-top: 20px;
+        margin-top: 38px;
         border: 1px solid #aeadb3;
         border-radius: 3px;
     }
@@ -45,22 +50,32 @@
     .contact-form {
         padding: 15px;
         transform: translateX(5vw);
-        input {
-            padding: 0.8vh 1.5vw 0.8vh 0.5vw !important;
-        }
+        
     }
 }
 
 @media (max-width: 768px) {
     .contact-form {
-        padding-right: 0px !important;
-        width: 55vw;
-        input{
-            width: 45%;
+        padding: 27px 10px 15px 10px !important;
+        width: 54.4vw;
+        .name-mail{
+            grid-column-gap: 15px;
+            margin-bottom: 10px;
+
+            input {
+                padding: 5px;
+            }
         }
+        
         textarea{
-            width: 94%;
+            margin-top: 0px;
+            margin-bottom: 12px;
         }
+
+        .submit-btn {
+            margin-top: 0px;
+        }
+        
         input,
         textarea,
         .submit-btn {
@@ -68,7 +83,6 @@
         }
         .submit-btn {
             padding: 0.5vh 4vw !important;
-            margin-right: 3vw !important;
         }
     }
 }
