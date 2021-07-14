@@ -1,5 +1,5 @@
 .our-services {
-    padding: 20px 0 0;
+    padding: 44px 7.6vw 100px 7.6vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,6 +7,7 @@
     .heading {
         text-align: center;
         letter-spacing: 0.1em;
+        margin-bottom: 40px;
 
         h2 {
             color: #373435;
@@ -16,11 +17,18 @@
             color: #1475a2;
         }
     }
+
     .we-are-doing {
-        padding: 30px 0 0;
+        padding-bottom: 20px;
+    }
+}
+
+@media ( min-width: 769px ) {
+    .we-are-doing {
         display: grid;
-        grid-gap: 0 3.5vw;
-        grid-template-columns: 1fr 1fr;
+        grid-gap: 115px 3.5vw;
+        grid-template-rows: repeat(2, calc( 11.6vw + 390px ));
+        grid-template-columns: 40vw 40vw; 
     }
 }
 
@@ -32,10 +40,9 @@
             align-self: center;
         }
         .we-are-doing {
-            display: flex;
-            align-items: flex-end;
-            flex-direction: column;
-            padding: 30px 0 0;
+            display: grid;
+            grid-template-columns: max-content;
+            grid-row-gap: 2.7vw;
         }
     }
 }

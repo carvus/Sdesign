@@ -45,7 +45,7 @@ export default function OurWorks() {
                 <h3>Մենք կատարում ենք</h3>
             </div>
             <div className="we-are-doing">
-                {data.map((el, i) => <Service data={el} key={i} />)}
+                {data.map((el, i) => <Service data={el} order={i+1} key={i} />)}
             </div>
         </div>
     )
