@@ -5,22 +5,22 @@ import '../../css/slider.scss';
 
 export default function GalleryModalSlider(props) {
     return (
-        <div>
+        <div className="gallery-modal">
             <AwesomeSlider bullets={false}>
                 <div className="gallery-slide">
-                    <img onClick={() => props.openModal(props.url)} className="gallery-image" src="images/gallery/everest.png" alt="" />
-                    <img onClick={() => props.openModal(props.url)} className="gallery-image" src="images/gallery/brunch.png" alt="" />
-                    <img onClick={() => props.openModal(props.url)} className="gallery-image" src="images/gallery/ritox.png" alt="" />
+                    <img className="gallery-image" src="images/gallery/everest.png" alt="" />
+                    <img className="gallery-image" src="images/gallery/brunch.png" alt="" />
+                    <img className="gallery-image" src="images/gallery/ritox.png" alt="" />
                 </div>
                 <div className="gallery-slide">
-                    <img onClick={() => props.openModal(props.url)} className="gallery-image" src="images/gallery/everest.png" alt="" />
-                    <img onClick={() => props.openModal(props.url)} className="gallery-image" src="images/gallery/vanardi.png" alt="" />
-                    <img onClick={() => props.openModal(props.url)} className="gallery-image" src="images/gallery/marifos.png" alt="" />
+                    <img className="gallery-image" src="images/gallery/everest.png" alt="" />
+                    <img className="gallery-image" src="images/gallery/vanardi.png" alt="" />
+                    <img className="gallery-image" src="images/gallery/marifos.png" alt="" />
                 </div>
                 <div className="gallery-slide">
-                    <img onClick={() => props.openModal(props.url)} className="gallery-image" src="images/gallery/brunch.png" alt="" />
-                    <img onClick={() => props.openModal(props.url)} className="gallery-image" src="images/gallery/ritox.png" alt="" />
-                    <img onClick={() => props.openModal(props.url)} className="gallery-image" src="images/gallery/vanardi.png" alt="" />
+                    <img className="gallery-image" src="images/gallery/brunch.png" alt="" />
+                    <img className="gallery-image" src="images/gallery/ritox.png" alt="" />
+                    <img className="gallery-image" src="images/gallery/vanardi.png" alt="" />
                 </div>
             </AwesomeSlider>
         </div>

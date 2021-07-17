@@ -19,10 +19,10 @@ export default function Service({ data, order }) {
             <img ref={img} src={data.background} style={data.align === "right" ? { alignSelf: "flex-end" } : { alignSelf: "flex-start" } }  alt="" />
             <div className="description" ref={descriptionDiv} >
                 <div className="description-content">
-                    <h2>{data.title}</h2>
-                    <p style={{ textAlign: data.align }}>{data.subTitle}</p>
-                    <p style={{ textAlign: data.align }}>{data.weAreDoing}</p>
-                    <ul style={{ listStyle: !(data.align === "left") ? `url(images/serviceImages/left-arr.png)` : `url(images/serviceImages/right-arr.png)` }}>
+                    <h2 className="description-content_title">{data.title}</h2>
+                    {data.subTitle && <p className="description-content_text" style={{ textAlign: data.align }}>{data.subTitle}</p>}
+                    <p className="description-content_text" style={{ textAlign: data.align }}>{data.weAreDoing}</p>
+                    <ul className="description-content_text" style={{ listStyle: !(data.align === "left") ? `url(images/serviceImages/left-arr.png)` : `url(images/serviceImages/right-arr.png)` }}>
                         {data.services.map((el, i) => <li style={{ textAlign: data.align, direction: data.align === "right" && "rtl" }} key={i}>{el}</li>)}
                     </ul>
                 </div>

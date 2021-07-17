@@ -1,8 +1,11 @@
 import React from 'react';
+
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
+
 import ContactUsForm from '../components/Contacts/ContactUsForm';
 import ContactMethods from '../components/Contacts/ContactMethods';
+
 import '../css/contact/contacts.scss';
 
 export default function Contacts() {

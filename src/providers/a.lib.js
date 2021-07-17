@@ -1,10 +1,19 @@
-export const request =  (method, url) => new Promise(async(rslv, rjct)=>{
-    try{
-        const rslt = await fetch(url, { method });
-        const rspAsJson = await rslt.json();
-        rslv(rspAsJson);
-    }
-    catch(err){
+import { host } from './constants'
+
+export const GET_IMAGE = (url) => host + '/public/' + url
+
+const axios = require("axios");
+
+export const request = (axiosInfo) => new Promise((rslv, rjct) => {
+    try {
+        axios(axiosInfo)
+            .then((response) => {
+                rslv(response.data);
+            })
+            .catch((err) => {
+                rjct(err);
+            });
+    } catch (err) {
         rjct(err);
     }
-})
+});

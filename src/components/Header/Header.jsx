@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import '../../css/header.scss';
 import { Link } from 'react-router-dom';
 
-export default function Header() {
+export default function Header(props) {
     const [ currentLang, setCurrentLang ] = useState("arm");
-
     return (
-        <div className="header">
-            <img className="header-logo" src="images/bigger-logo2.png" alt="" />
+        <div className="header" style={{zIndex: props.isHeaderHidden}}>
+            <Link to="/home"><img className="header-logo" src="images/bigger-logo2.png" alt="" /></Link>
             <div style={{display: "flex"}}>
                 <input type="checkbox" id="check" />
                 <label htmlFor="check" className="three-lines">

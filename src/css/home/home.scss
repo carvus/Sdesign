@@ -4,12 +4,13 @@
   box-sizing: border-box;
 }
 
-#portalInApp{
+.no-scroll {
+  width: 100vw;
   height: 100vh;
-  position: relative;
+  overflow: hidden;
 }
-.home {
 
+.home {
   display: grid;
   grid-template-columns: max-content auto;
   min-height: 100vh;
@@ -50,8 +51,8 @@
   justify-content: space-between;
   padding: 11vh 15.6vw;
 
-  .des-service {  
-    display: grid; 
+  .des-service {
+    display: grid;
     grid-row-gap: 40px;
     grid-template-rows: max-content auto;
 
@@ -68,7 +69,6 @@
     }
   }
 }
-
 
 @media (max-width: 768px) {
   .home {
@@ -91,9 +91,11 @@
     justify-content: space-between;
     padding: 50px 30px;
 
-    .des-service img {
-      width: 70px;
-      height: 70px;
+    .des-service {
+      img {
+        width: 70px;
+        height: 70px;
+      }
     }
 
     .des-service p {
@@ -106,5 +108,23 @@
   .cover-page {
     height: 42vh !important;
     background-position: 100% !important;
+  }
+  .services {
+    padding: 40px 0 !important;
+    .des-service{
+      font-weight: 600 !important;
+      font-size: 6px !important;
+      grid-row-gap: 20px;
+      img{
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .services{
+    flex-wrap: wrap;
   }
 }

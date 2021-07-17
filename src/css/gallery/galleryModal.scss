@@ -1,71 +1,92 @@
-.gallery-modal-wrapper{
-    min-width: 100%;
-    min-height: 100vh;
+.gallery-modal-wrapper {
+  padding: 100px 0;
+  min-width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+
+  .close-modal-btn {
     position: absolute;
-    left: 0;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0,0,0,0.9);
+    right: 13%;
+    top: 25%;
+    cursor: pointer;
+  }
 
-    .close-modal-btn{
-        position: absolute;
-        right: 9vw;
-        top: 16vh;
-        cursor: pointer;
+  .modal {
+    max-height: 100vh;
+    overflow: auto;
+
+    &-cover {
+      margin-bottom: -130px;
+      width: 70vw;
     }
 
-    .modal{
-        width: 63%;
-        height: 200.9vh;
-        padding: 15vh 0 0;
-
-        &-cover{
-            height: 80%;
-            width: 100%;
-        }
+    &::-webkit-scrollbar {
+      display: none;
     }
+  }
 }
 
-
-
-@media (max-width: 1200px){
-    .modal{
-        height: 153vh !important;
-
-        &-cover{
-            height: 78% !important;
-        }
-    }
+.gallery-modal {
+  .awssld__container {
+    padding-bottom: 48% !important;
+  }
 }
 
+@media (max-width: 1200px) {
+  .modal {
+    width: 60% !important;
+
+    &-cover {
+      width: 100% !important;
+      margin-bottom: -43px !important;
+    }
+
+    .gallery-modal {
+      .awssld__container {
+        padding-bottom: 74% !important;
+      }
+    }
+  }
+}
 @media (max-width: 768px) {
-    .close-modal-btn{
-        top: 7vh !important;
-    }
-    .modal{
-        padding-top: 9vh !important;
-        height: 206.9vh !important;
+  .gallery-modal-wrapper {
+    padding: 29px 0 !important;
 
-        &-cover{
-            height: 83% !important;
-        }
+    .close-modal-btn {
+      top: 4% !important;
+      right: 6.2% !important;
     }
+    .modal {
+      width: 70% !important;
+
+      &-cover {
+        margin-bottom: 5px !important;
+      }
+    }
+  }
 }
 
 @media (max-width: 375px) {
-    .close-modal-btn{
-        top: 10vh !important;
-        right: 0 !important;
+  .gallery-modal-wrapper {
+    padding: 36px 0 !important;
+    .close-modal-btn {
+      top: 0.8% !important;
+      right: 7% !important;
     }
-    .modal{
-        width: 86vw !important;
-        height: 208.5vh !important;
+    .modal {
+      width: 86vw !important;
+    }
+  }
 
-        &-cover{
-            width: 100% !important;
-            height: 85% !important;
-        }
+  .gallery-modal {
+    .awssld__container {
+      padding-bottom: 93% !important;
     }
+  }
 }

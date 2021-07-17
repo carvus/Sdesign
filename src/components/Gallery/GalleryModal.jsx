@@ -1,15 +1,23 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import '../../css/gallery/galleryModal.scss';
 import GalleryModalSlider from './GalleryModalSlider';
 
 export default function GalleryModal(props) {
-    return (
+
+    function closeModal(){
+        props.onClose();
+        document.body.classList.remove("no-scroll")
+    }
+
+    return ReactDOM.createPortal(
         <div className="gallery-modal-wrapper"> 
-        <img className="close-modal-btn" onClick={props.onClose} src="images/gallery/modalclose.png" alt="" />
+        <img className="close-modal-btn" onClick={closeModal} src="images/gallery/modalclose.png" alt="" />
             <div className="modal"> 
                 <img className="modal-cover" src={props.modalImg} alt=""  />
-                <GalleryModalSlider openModal={props.openModal} url={props.modalImg}/>
+                <GalleryModalSlider imgs={props.imgs} openModal={props.openModal}/>
             </div>
-        </div>
+        </div>,
+        document.getElementById("portal")
     )
 }

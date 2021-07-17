@@ -23,7 +23,14 @@
     }
 }
 
-@media ( min-width: 769px ) {
+
+@media ( max-width: 1440px ) {
+    .we-are-doing{
+        grid-gap: 215px 0.5vw !important;
+    }
+}
+
+@media ( min-width: 901px ) {
     .we-are-doing {
         display: grid;
         grid-gap: 115px 3.5vw;
@@ -32,7 +39,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .our-services {
         padding: 0 25px 50px 20px;
         align-items: flex-end;
@@ -42,7 +49,7 @@
         .we-are-doing {
             display: grid;
             grid-template-columns: max-content;
-            grid-row-gap: 2.7vw;
+            grid-row-gap: 2.7vw !important;
         }
     }
 }
