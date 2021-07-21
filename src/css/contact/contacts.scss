@@ -1,107 +1,117 @@
 .contacts {
-    .title {
-        font-size: 28px;
-        margin: 35px 0 0 0;
-        text-align: center;
-    }
-    iframe {
-        border: 0;
-        width: 100%;
-        height: 55vh;
-        margin-bottom: 75px;
-    }
-    .mid-content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 40px 0;
+  .title {
+    font-size: 28px;
+    margin: 35px 0 0 0;
+    text-align: center;
+  }
+  iframe {
+    border: 0;
+    width: 100%;
+    height: 55vh;
+    margin-bottom: 75px;
+  }
+  .mid-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
 
-        .contact-methods {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            background: #1475a2;
-            width: 33.5vw;
-            font-size: 12px;
-            padding: 109px 120px 93px 12vw;
-            color: #fff;
+    .contact-methods {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background: #1475a2;
+      width: 33.5vw;
+      font-size: 12px;
+      padding: 109px 120px 93px 12vw;
+      color: #fff;
 
-            img {
-                width: 0.8vw;
-            }
+      img {
+        width: 0.8vw;
+      }
 
-            .options {
-                padding-top: 10px;
-                div {
-                    display: flex;
-                    align-items: flex-start;
-                    margin-bottom: 20px;
+      .options {
+        padding-top: 10px;
+        div {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 20px;
 
-                    p {
-                        margin-left: 20px;
-                        letter-spacing: 0.2em;
-                    }
-                }
-            }
-            .option1 {
-                margin-bottom: 20px;
-                border-bottom: 1px solid #fff;
-            }
+          p {
+            margin-left: 20px;
+            letter-spacing: 0.2em;
+          }
         }
+      }
+      .option1 {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #fff;
+      }
     }
+  }
+  .loading-modal-wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+  }
 }
 
 @media (max-width: 1300px) {
-    .contact-methods {
-        font-size: 8px !important;
-        padding-right: 3vw;
+  .contact-methods {
+    font-size: 8px !important;
+    padding-right: 3vw;
 
-        img {
-            width: 1vw !important;
-        }
+    img {
+      width: 1vw !important;
     }
+  }
 }
 
 @media (max-width: 768px) {
-    .contacts {
-        .title{
-            font-size: 18px;
-        }
-        iframe {
-            height: 30vh !important;
-        }
-        .mid-content {
-            justify-content: flex-start !important;
-        }
-        .contact-methods {
-            width: 45vw !important;
-            font-size: 6px !important;
-            padding: 76px 15px 0 10vw !important;
-            margin: 25px 0 !important;
-
-            img {
-                width: 1.5vw !important;
-            }
-        }
+  .contacts {
+    .title {
+      font-size: 18px;
     }
+    iframe {
+      height: 30vh !important;
+    }
+    .mid-content {
+      justify-content: flex-start !important;
+    }
+    .contact-methods {
+      width: 45vw !important;
+      font-size: 6px !important;
+      padding: 76px 15px 0 10vw !important;
+      margin: 25px 0 !important;
+
+      img {
+        width: 1.5vw !important;
+      }
+    }
+  }
 }
 
 @media (max-width: 375px) {
-    .contacts {
-        .title {
-            text-align: left !important;
-            font-size: 16px;
-            padding-left: 25px;
-        }
-        .mid-content{
-            padding-top: 0 !important;
-        }
-        .contact-methods {
-            width: 52vw !important;
-            padding: 29px 15px 0 7vw !important;
-            transform: translateX(-15px);
-            z-index: -1;
-        
-        }
+  .contacts {
+    .title {
+      text-align: left !important;
+      font-size: 16px;
+      padding-left: 25px;
     }
+    .mid-content {
+      padding-top: 0 !important;
+    }
+    .contact-methods {
+      width: 52vw !important;
+      padding: 29px 15px 0 7vw !important;
+      transform: translateX(-15px);
+      z-index: -1;
+    }
+  }
 }

@@ -9,8 +9,7 @@ export default function Project({ title, openModal, items }) {
                 {
                     items && items.map( (el, i) => (
                         <div className="project" key={i}>
-                            <img src={GET_IMAGE(el["cover-img"])} alt="" />
-                            <div className="project-name" onClick={() => openModal(GET_IMAGE(el.img))}>
+                            <div className="project-name" onClick={() => openModal(GET_IMAGE(el["cover-img"]))}>
                                 <p>{el["title-en"]}</p>
                             </div>
                         </div>

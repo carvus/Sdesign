@@ -21,12 +21,12 @@ export const getPartners = async (setData) => {
     }
 } 
 
-export const postContactFormData = async (formData) => {
+export const postContactFormData = (formData) => new Promise(async (rslv, rjct) => {
     try{
-       const postData = await request({method: "POST", url: host + "/api/send-msg", data: formData})
-       console.log(postData);
+       const postData = await request({method: "POST", url: host + "/api/data/notifications", data: formData})
+       rslv(postData)
     }
     catch(err) {
-        console.log(err);
+        rjct(err)
     }
-}
+})

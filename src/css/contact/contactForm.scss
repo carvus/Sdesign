@@ -31,11 +31,13 @@
         margin-top: 38px;
         border: 1px solid #aeadb3;
         border-radius: 3px;
+        padding: 10px;
     }
 
     .submit-btn {
         background: none;
         padding: 1vh 2vw;
+        cursor: pointer;
         line-height: 134.77%;
         border-radius: 3px;
         align-self: flex-end;

@@ -52,6 +52,10 @@
 
     .contacts-lang {
       align-self: center;
+
+      span{
+        cursor: pointer;
+      }
     }
   }
 }
