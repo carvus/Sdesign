@@ -20,13 +20,17 @@
 
   ul {
     list-style-type: none;
-  }
 
-  &-list-items {
-    line-height: 34px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
+    li {
+      margin-bottom: 15px;
+
+      .sidebar-list-items {
+        line-height: 34px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 24px;
+      }
+    }
   }
 
   .contact-icons img:not(:nth-of-type(1)),
@@ -41,7 +45,7 @@
 }
 
 @media (min-width: 769px) {
-  .sidebar{
+  .sidebar {
     .logo {
       margin-bottom: 24.2vh;
     }
@@ -53,7 +57,7 @@
     .contacts-lang {
       align-self: center;
 
-      span{
+      span {
         cursor: pointer;
       }
     }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../css/home/footer.scss';
 
 export default function Footer() {
@@ -36,8 +37,8 @@ export default function Footer() {
                         <li>ԼԱԶԵՐԱՅԻՆ և ՖՐԵԶԵՐԱՅԻՆ ԱՇԽԱՏԱՆՔՆԵՐ</li>
                     </ul>
                     <div>
-                        <img src="images/home/icons/footer-icons/instagram.png" alt="" />
-                        <img src="images/home/icons/footer-icons/facebook.png" alt="" />
+                        <a href="https://instagram.com/sdesign.yerevan?utm_medium=copy_link" target="blank"><img src="images/home/icons/footer-icons/instagram.png" alt="" /></a>
+                        <a href="https://www.facebook.com/yerevanSdesign" target="blank"><img src="images/home/icons/footer-icons/facebook.png" alt="" /></a>
                         <p>© 2021 Sdesign. All Rights Reserved.</p>
                     </div>
                 </div>

@@ -17,6 +17,8 @@ export default function ContactUsForm({ setIsOpenModal, setModalInfo }) {
             "content": formElements.msg ? formElements.msg.value : ""
         }
         try {
+            document.body.classList.add("no-scroll")
+            window.scrollTo(0, 0)
             setIsLoaderOpen(true)
             await postContactFormData(formData);
             setIsLoaderOpen(false)
@@ -44,8 +46,6 @@ export default function ContactUsForm({ setIsOpenModal, setModalInfo }) {
                 });
 
         };
-        document.body.classList.add("no-scroll")
-        window.scrollTo(0,0)
     }
 
     return (
