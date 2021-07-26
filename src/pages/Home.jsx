@@ -8,7 +8,7 @@ import Partners from '../components/Partners/Partners';
 
 import '../css/home/home.scss';
 
-export default function Home() {
+function Home() {
     return (
         <div className="main">
             <div className="home">
@@ -22,3 +22,4 @@ export default function Home() {
         </div>
     )
 }
+export default Home;

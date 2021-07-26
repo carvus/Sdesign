@@ -8,14 +8,15 @@ import ContactUsForm from '../components/Contacts/ContactUsForm';
 import ContactMethods from '../components/Contacts/ContactMethods';
 
 import '../css/contact/contacts.scss';
+import { withI18n } from 'react-i18next';
 
-export default function Contacts() {
+function Contacts( { t } ) {
     const [modalInfo, setModalInfo] = useState({});
     const [isOpenModal, setIsOpenModal] = useState(false);
     return (
         <div className="contacts">
             <Header/>
-            <p className="title">Կապ հաստատեք մեզ հետ</p>
+            <p className="title">{t("Կապ հաստատեք մեզ հետ")}</p>
             <div className="mid-content">
                 <ContactUsForm setModalInfo={setModalInfo} setIsOpenModal={setIsOpenModal}/>
                 <ContactMethods/>
@@ -26,3 +27,5 @@ export default function Contacts() {
         </div>
     )
 }
+
+export default withI18n()(Contacts);

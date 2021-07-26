@@ -1,8 +1,13 @@
 import React from "react";
+import { withI18n } from "react-i18next";
 import { Link } from "react-router-dom";
 import "../css/home/sidebar.scss";
 
-export default function Sidebar() {
+function Sidebar( { t, i18n } ) {
+  function changeLanguage( lang ) {
+    i18n.changeLanguage( lang );
+  }
+
   return (
     <div className="sidebar">
       <div className="logo"></div>
@@ -14,17 +19,17 @@ export default function Sidebar() {
         <ul>
           <li>
             <Link to="/services" className="sidebar-list-items">
-              ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ
+              {t("tsarayutyunner")}
             </Link>
           </li>
           <li>
             <Link to="/gallery" className="sidebar-list-items">
-              ՏԵՍԱԴԱՐԱՆ
+              {t("tesadaran")}
             </Link>
           </li>
           <li>
             <Link to="/contacts" className="sidebar-list-items">
-              ԿՈՆՏԱԿՏՆԵՐ
+              {t("kontaktner")}
             </Link>
           </li>
         </ul>
@@ -45,10 +50,12 @@ export default function Sidebar() {
           </a>
         </div>
         <div className="languages" style={{ marginTop: "20px" }}>
-          <span>ARM</span>
-          <span>ENG</span>
+          <span onClick={()=>changeLanguage(`hy`)}>ARM</span>
+          <span onClick={()=>changeLanguage(`en`)}>ENG</span>
         </div>
       </div>
     </div>
   );
 }
+
+export default withI18n()(Sidebar);

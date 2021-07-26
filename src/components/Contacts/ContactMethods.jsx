@@ -1,12 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-export default function ContactMethods() {
+import { withI18n } from 'react-i18next';
+
+function ContactMethods( { t } ) {
     return (
         <div className="contact-methods">
             <div className="option1 options">
                 <div>
                     <img src="images/home/icons/footer-icons/location.png" alt="" />
-                    <p>Գյուլբենկյան 31, Երեվան</p>
+                    <p>{t(`Գյուլբենկյան 31, Երեվան`)}</p>
                 </div>
                 <div>
                     <img src="images/home/icons/footer-icons/viber.png" alt="" />
@@ -24,7 +26,7 @@ export default function ContactMethods() {
             <div className="option2 options">
                 <div>
                     <img src="images/home/icons/footer-icons/location.png" alt="" />
-                    <p>Վասիլյան 2/2 ք․ Իջեվան</p>
+                    <p>{t(`Վասիլյան 2/2 ք․ Իջեվան`)}</p>
                 </div>
                 <div>
                     <img src="images/home/icons/footer-icons/viber.png" alt="" />
@@ -43,3 +45,6 @@ export default function ContactMethods() {
         </div>
     )
 }
+
+
+export default withI18n()(ContactMethods);

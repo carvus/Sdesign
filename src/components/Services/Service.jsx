@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import '../../css/services/service.scss';
+import { withI18n } from 'react-i18next';
 
-export default function Service({ data, order }) {
+function Service({ data, order, t }) {
     const descriptionDiv = useRef();
     const serviceDiv = useRef();
     const img = useRef();
@@ -26,8 +27,9 @@ export default function Service({ data, order }) {
                         {data.services.map((el, i) => <li style={{ textAlign: data.align, direction: data.align === "right" && "rtl" }} key={i}>{el}</li>)}
                     </ul>
                 </div>
-                <Link to="/gallery"><button className="seemore-btn">ԾԱՆՈԹԱՆԱԼ <span>→</span></button></Link>
+                <Link to="/gallery"><button className="seemore-btn">{t("get-familiar")} <span>→</span></button></Link>
             </div>
         </div>
     )
 }
+export default withI18n()(Service);

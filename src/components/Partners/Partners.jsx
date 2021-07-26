@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import AwesomeSlider from 'react-awesome-slider';
+import { withI18n } from 'react-i18next';
 
 import 'react-awesome-slider/dist/styles.css';
 
@@ -9,7 +10,7 @@ import { GET_IMAGE } from '../../providers/a.lib';
 import '../../css/home/partners.scss';
 import '../../css/slider.scss';
 
-export default function Partners() {
+function Partners({t}) {
     const [partnersData, setPartnersData] = useState(null);
     useEffect(() => {
         getPartners(setPartnersData)
@@ -17,12 +18,14 @@ export default function Partners() {
     console.log(partnersData);
     return (
         <div className="partners-slider">
-            <h2>ՄԵՐ ԳՈՐԾԸՆԿԵՐՆԵՐ</h2>
+            <h2>{t("mer-gortsnkerner")}</h2>
             <AwesomeSlider organicArrows={false}>
                 <div className="slide">
-                    {partnersData && partnersData.data.items.map((el,i)=> <img src={GET_IMAGE(el.img)} key={i} alt="" className="partners-logo"/>)}
+                    {partnersData && partnersData.data?.items?.map((el,i)=> <img src={GET_IMAGE(el.img)} key={i} alt="" className="partners-logo"/>)}
                 </div>
             </AwesomeSlider>
         </div>
     )
 }
+
+export default withI18n()(Partners);

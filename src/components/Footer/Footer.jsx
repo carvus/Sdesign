@@ -1,16 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { withI18n } from 'react-i18next';
+
 import '../../css/home/footer.scss';
 
-export default function Footer() {
+function Footer({t}) {
     return (
         <div className="footer">
             <div className="footer-content">
                 <div className="footer-contacts">
 
-                    <p className="info-1-column-item">ՀՀ,0033 ք, Երևան Գյուլբենկյան 31</p>
+                    <p className="info-1-column-item">{t("erevan-hasce")}</p>
                     <img className="icon-column-item" src="images/home/icons/footer-icons/location.png" alt="" />
-                    <p className="info-2-column-item">ՀՀ,4001 ք, Իջևան Վասիլյան 2/2</p>
+                    <p className="info-2-column-item">{t("ijevan-hasce")}</p>
 
                     <p className="info-1-column-item">011 700 992 <br /> 096 23 43 43 </p>
                     <img className="icon-column-item" src="images/home/icons/footer-icons/phone.png" alt="" />
@@ -25,16 +26,16 @@ export default function Footer() {
                     <p className="info-2-column-item">sdesign.ijevan@gmail.com</p> 
                 </div>
                 <div className="our-works">
-                    <h3>Մենք կատարում ենք</h3>
+                    <h3>{t("menq-katarumenq")}</h3>
                     <ul>
-                        <li>ԴԻԶԱՅՆ</li>
-                        <li>ՎԱՀԱՆԱԿՆԵՐ</li>
-                        <li>ԼԱՅՆԱՖՈՐՄԱՏ ՏՊԱԳՐՈՒԹՅՈՒՆ</li>
-                        <li>ՑՈՒՑԱՆԱԿՆԵՐ</li>
-                        <li>ԾԱՎԱԼԱՅԻՆ ՏԱՌԵՐ</li>
-                        <li> 3D ՓՈՐԱԳՐՈՒԹՅՈՒՆ</li>
-                        <li>ԻՆՏԵՐԻԵՐԻ և ԷՔՍՏԵՐԻԵՐԻ ԴԻԶԱՅՆ</li>
-                        <li>ԼԱԶԵՐԱՅԻՆ և ՖՐԵԶԵՐԱՅԻՆ ԱՇԽԱՏԱՆՔՆԵՐ</li>
+                        <li>{t("dizayn")}</li>
+                        <li>{t("vahanakner")}</li>
+                        <li>{t("laynaformat-tpagrutyun")}</li>
+                        <li>{t("cucanakner")}</li>
+                        <li>{t("tsavalayin-tarer")}</li>
+                        <li>{t("poragrutyun")}</li>
+                        <li>{t("int-ext-dizayn")}</li>
+                        <li>{t("lazerayin-ashxatanqner")}</li>
                     </ul>
                     <div>
                         <a href="https://instagram.com/sdesign.yerevan?utm_medium=copy_link" target="blank"><img src="images/home/icons/footer-icons/instagram.png" alt="" /></a>
@@ -46,3 +47,5 @@ export default function Footer() {
         </div>
     )
 }
+
+export default withI18n()(Footer);

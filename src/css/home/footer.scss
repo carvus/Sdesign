@@ -61,6 +61,8 @@
         grid-template-rows: repeat(4, max-content);
         grid-gap: 28px 24px;
         list-style: url("../../images/list-arrow.png");
+
+        li{text-transform: uppercase;}
     }
 }
 

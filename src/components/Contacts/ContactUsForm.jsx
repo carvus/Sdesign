@@ -4,9 +4,10 @@ import { postContactFormData } from '../../providers/requests';
 import Loading from './Loading';
 
 import '../../css/contact/contactForm.scss';
+import { withI18n } from 'react-i18next';
 
 
-export default function ContactUsForm({ setIsOpenModal, setModalInfo }) {
+function ContactUsForm({ setIsOpenModal, setModalInfo, t }) {
     const [isLoaderOpen, setIsLoaderOpen] = useState(false)
     const submitMessage = async (e) => {
         e.preventDefault()
@@ -29,7 +30,7 @@ export default function ContactUsForm({ setIsOpenModal, setModalInfo }) {
             }, 2000)
             setModalInfo(
                 {
-                    text: "Ուղարկված է:",
+                    text: t("Ուղարկված է:"),
                     img: "images/confirmation 1.png"
                 });
         } catch (err) {
@@ -41,7 +42,7 @@ export default function ContactUsForm({ setIsOpenModal, setModalInfo }) {
             }, 2000)
             setModalInfo(
                 {
-                    text: "Ինչ որ բան այնպես չէ:",
+                    text: t("Ինչ որ բան այնպես չէ:"),
                     img: "images/red-x.png"
                 });
 
@@ -53,20 +54,22 @@ export default function ContactUsForm({ setIsOpenModal, setModalInfo }) {
             <form action="" className="contact-form" onSubmit={submitMessage}>
                 <div className="name-mail">
                     <input type="text"
-                        placeholder="Անուն"
+                        placeholder={t(`Անուն`)}
                         name="username"
                         id="username"
                     />
                     <input type="text"
-                        placeholder="Էլ փոստ"
+                        placeholder={t(`Էլ փոստ`)}
                         name="email"
                         id="useremail"
                     />
                 </div>
                 <textarea name="msg" id="msg-textarea" rows="10"></textarea>
-                <button className="submit-btn">Ուղարկել<span> →</span></button>
+                <button className="submit-btn">{t(`Ուղարկել`)}<span> →</span></button>
             </form>
             {isLoaderOpen && <Loading />}
         </>
     )
 }
+
+export default withI18n()( ContactUsForm );

@@ -1,24 +1,28 @@
-import React from 'react'
+import React from 'react';
+import { withI18n } from "react-i18next";
 
-export default function Services() {
+
+function Services({t}) {
     return (
         <div className="services">
             <div className="des-service">
                 <img src="images/home/services/design.png" alt="" />
-                <p>Դիզայն</p>
+                <p>{t("dizayn")}</p>
             </div>
             <div className="des-service">
                 <img src="images/home/services/advertisement.png" alt="" />
-                <p>Արտաքին գովազդ</p>
+                <p>{t("artaqin-govazd")}</p>
             </div>
             <div className="des-service">
                 <img src="images/home/services/printing.png" alt="" />
-                <p>Տպագրություն</p>
+                <p>{t("tpagrutyun")}</p>
             </div>
             <div className="des-service">
                 <img src="images/home/services/engraving.png" alt="" />
-                <p>Լազերային և ֆրեզերային <br/>  փորագրություն</p>
+                <p>{t("lazerayin-tpagrutyun")}</p>
             </div>
         </div>
     )
 }
+
+export default withI18n()(Services);
