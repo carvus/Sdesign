@@ -37,7 +37,7 @@ function Footer({t}) {
                         <li>{t("int-ext-dizayn")}</li>
                         <li>{t("lazerayin-ashxatanqner")}</li>
                     </ul>
-                    <div>
+                    <div className="social-media">
                         <a href="https://instagram.com/sdesign.yerevan?utm_medium=copy_link" target="blank"><img src="images/home/icons/footer-icons/instagram.png" alt="" /></a>
                         <a href="https://www.facebook.com/yerevanSdesign" target="blank"><img src="images/home/icons/footer-icons/facebook.png" alt="" /></a>
                         <p>© 2021 Sdesign. All Rights Reserved.</p>

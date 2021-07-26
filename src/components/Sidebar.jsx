@@ -39,9 +39,9 @@ function Sidebar( { t, i18n } ) {
           <a href="https://www.facebook.com/yerevanSdesign" target="blank">
             <img src="images/home/icons/facebook.png" alt="" />
           </a>
-          <a href="tel:+37498824494">
+          <Link to="/contacts">
             <img src="images/home/icons/phone.png" alt="" />
-          </a>
+          </Link>
           <a
             href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCHrjFBldJbjTzvvWsNWkfnpwHvLRcTcMGZnRvcJlwmMdfkgrsWJvJfqKvNbgTnqLstgXbTg"
             target="blank"
