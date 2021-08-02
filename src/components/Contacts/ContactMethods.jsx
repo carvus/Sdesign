@@ -8,7 +8,7 @@ function ContactMethods( { t } ) {
             <div className="option1 options">
                 <div>
                     <img src="images/home/icons/footer-icons/location.png" alt="" />
-                    <p>{t(`Գյուլբենկյան 31, Երեվան`)}</p>
+                    <p>{t(`Գյուլբենկյան 31, Երևան`)}</p>
                 </div>
                 <div>
                     <img src="images/home/icons/footer-icons/viber.png" alt="" />
@@ -26,7 +26,7 @@ function ContactMethods( { t } ) {
             <div className="option2 options">
                 <div>
                     <img src="images/home/icons/footer-icons/location.png" alt="" />
-                    <p>{t(`Վասիլյան 2/2 ք․ Իջեվան`)}</p>
+                    <p>{t(`Վասիլյան 2/2 ք․ Իջևան`)}</p>
                 </div>
                 <div>
                     <img src="images/home/icons/footer-icons/viber.png" alt="" />

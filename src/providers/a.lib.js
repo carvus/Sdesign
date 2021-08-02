@@ -4,7 +4,8 @@ export const GET_IMAGE = (url) => host + '/public/' + url
 
 const axios = require("axios");
 
-export const request = (axiosInfo) => new Promise((rslv, rjct) => {
+export const request = (axiosInfo) => {
+    return new Promise((rslv, rjct) => {
     try {
         axios(axiosInfo)
             .then((response) => {
@@ -16,4 +17,4 @@ export const request = (axiosInfo) => new Promise((rslv, rjct) => {
     } catch (err) {
         rjct(err);
     }
-});
+})}
