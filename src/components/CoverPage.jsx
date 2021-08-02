@@ -5,6 +5,6 @@ export default function CoverPage() {
     return (
         <div className="cover-page">
             <Link to="/services"><button className="prt-btn">VIEW PORTFOLIO <span>→</span></button></Link>
-        </div>
+        </div> 
     )
 }
