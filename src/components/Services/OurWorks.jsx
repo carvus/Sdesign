@@ -9,7 +9,7 @@ function OurWorks({ t }) {
     const data = [
         {
             title: t("dizayn"),
-            background: "images/serviceImages/design.png",
+            background: "images/serviceImages/design.jpg",
             subTitle: t("dizayn-text"),
             weAreDoing: t("Ստեղծում և մշակում ենք ՝ "),
             services: t("service-1-items").split(`|`),
@@ -26,7 +26,7 @@ function OurWorks({ t }) {
 
         {
             title: t("tpagrutyun"),
-            background: "images/serviceImages/print.png",
+            background: "images/serviceImages/print.jpg",
             subTitle: t("Թվային  հարթակների  արագ զարգացման փաստը ակնհայտ է, բայց դա չի խանգարում ,  որպեսզի  լայնաֆորմատ և թվային տպագրությունները  մնան ակտուալ մարքետինգային արշավներում ։ Առաջարկում ենք ինչպես լայնաֆորմատ  բաններների, ինքնակպչուն թաղանթների տպագրություն, այնպես էլ  փակցման աշխատանքներ"),
             weAreDoing: t("Կատարում ենք ՝"),
             services: t("service-3-items").split(`|`),

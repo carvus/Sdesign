@@ -8,16 +8,16 @@ function Service({ data, order, t }) {
     const serviceDiv = useRef();
     const img = useRef();
 
-    useEffect(()=>{
-        if ( window.innerWidth <= 375 ) {
-            const diffBetweenDescriptionAndImg =  descriptionDiv.current.clientHeight - img.current.clientHeight ;
-            serviceDiv.current.style = `margin-bottom: ${diffBetweenDescriptionAndImg+15}px !important;`;
+    useEffect(() => {
+        if (window.innerWidth <= 375) {
+            const diffBetweenDescriptionAndImg = descriptionDiv.current.clientHeight - img.current.clientHeight;
+            serviceDiv.current.style = `margin-bottom: ${diffBetweenDescriptionAndImg + 15}px !important;`;
         }
     }, []);
 
     return (
         <div className={`service service-${order}`} ref={serviceDiv}>
-            <img ref={img} src={data.background} style={data.align === "right" ? { alignSelf: "flex-end" } : { alignSelf: "flex-start" } }  alt="" />
+            <img ref={img} src={data.background} style={data.align === "right" ? { alignSelf: "flex-end" } : { alignSelf: "flex-start" }} alt="" />
             <div className="description" ref={descriptionDiv} >
                 <div className="description-content">
                     <h2 className="description-content_title">{data.title}</h2>

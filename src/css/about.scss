@@ -1,66 +1,70 @@
 .about {
-    display: flex;
-    height: 70vh;
-    justify-content: flex-end;
-    align-items: center;
-    background: url("../images/about/about.png");
-    background-size: cover;
+  display: flex;
+  height: 70vh;
+  justify-content: flex-end;
+  align-items: center;
+  background: url("../images/about/about.png");
+  background-size: cover;
 
-    &-us-text {
-        padding: 20px;
-        background-color: rgba(20, 117, 162, 0.1);
-        width: 48vw;
+  &-us-text {
+    padding: 37px 122px 122px 122px;
+    background-color: rgba(20, 117, 162, 0.1);
+    width: 48vw;
 
-        h2 {
-            text-align: center;
-            text-transform: uppercase;
-        }
-
-        p {
-            margin-top: 20px;
-            text-align: justify;
-        }
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 46px;
     }
+
+    p {
+      text-align: justify;
+    }
+  }
 }
 
 @media (max-width: 768px) {
-    .about {
-        background-position: 10% !important;
-        min-height: 337px;
-        height: unset;
+  .about {
+    background-position: 10% !important;
+    min-height: 337px;
+    height: unset;
 
-        &-us-text {
-            width: 66.6vw;
+    &-us-text {
+      width: 66.6vw;
+      padding: 37px 71px 66px 72px;
 
-            h2 {
-                font-size: 18px;
-            }
+      h2 {
+        font-size: 18px;
+        margin-bottom: 27px;
+        text-transform: capitalize;
+      }
 
-            p {
-                font-size: 12px;
-            }
-        }
+      p {
+        font-size: 12px;
+      }
     }
+  }
 }
 
 @media (max-width: 375px) {
-    .about {
-        justify-content: center !important;
-        background-position: 45% !important;
-        min-height: 192px;
-        height: unset;
+  .about {
+    justify-content: center !important;
+    background-position: 45% !important;
+    min-height: 192px;
+    height: unset;
 
-        &-us-text {
-            width: 91vw;
-            padding: 3px 10px;
+    &-us-text {
+      width: 91vw;
+      padding: 5px 20px 31px 42px;
 
-            h2 {
-                font-size: 10px;
-            }
+      h2 {
+        font-size: 10px;
+        margin-bottom: 26px;
+      }
 
-            p {
-                font-size: 8px;
-            }
-        }
+      p {
+        font-size: 8px;
+      }
     }
+  }
 }
