@@ -1,1 +1,1 @@
-export const host = "https://admin.sdesign.am";
+export const host = "https://api.sdesign.am";
