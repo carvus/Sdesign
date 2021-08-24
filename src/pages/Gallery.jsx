@@ -14,6 +14,7 @@ export default function Gallery() {
     const [projectsData, setProjectsData] = useState(null);
     const [isOpenModal, setIsOpenModal] = useState(false);
     const [modalImg, setModalImg] = useState("");
+    const [ otherItems, setOtherItems ] = useState([]);
 
     const [ designItems, setDesignItems ] = useState([]);
     const [ advertismentItems, setAdvertismentItems ] = useState([]);
@@ -27,9 +28,10 @@ export default function Gallery() {
         }
     }, []);
 
-    const openModal = (imgUrl) => {
+    const openModal = (imgUrl, otherItems) => {
         setIsOpenModal(true);
         setModalImg(imgUrl);
+        setOtherItems( otherItems );
         window.scrollTo(0, 0);
         document.body.classList.add("no-scroll");
     }
@@ -53,7 +55,7 @@ export default function Gallery() {
                 { poragrutyumItems.length > 0 && <Project title="ԼԱԶԵՐԱՅԻՆ ԵՎ ՖՐԵԶԵՐԱՅԻՆ ՓՈՐԱԳՐՈՒԹՅՈՒՆ" items={poragrutyumItems} openModal={openModal} />}
             </div>
             <Footer />
-            {isOpenModal && <GalleryModal imgs={projectsData && projectsData.data.items} modalImg={modalImg} onClose={() => setIsOpenModal(false)} openModal={openModal} />}
+            {isOpenModal && <GalleryModal imgs={projectsData && projectsData.data.items} otherItems={ otherItems } modalImg={modalImg} onClose={() => setIsOpenModal(false)} openModal={openModal} />}
         </div>
     )
 }

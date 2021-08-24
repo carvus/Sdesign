@@ -15,7 +15,7 @@ export default function GalleryModal(props) {
         <img className="close-modal-btn" onClick={closeModal} src="images/gallery/modalclose.png" alt="" />
             <div className="modal"> 
                 <img className="modal-cover" src={props.modalImg} alt=""  />
-                <GalleryModalSlider imgs={props.imgs} openModal={props.openModal}/>
+                <GalleryModalSlider imgs={props.imgs} openModal={props.openModal} otherItems={ props.otherItems } />
             </div>
         </div>,
         document.getElementById("portal")
