@@ -44,8 +44,7 @@ function Sidebar({ t, i18n }) {
               <img src="images/home/icons/phone.png" alt="" />
             </Link>
             <a
-              href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNtfNHgGLJlbJzxgPksnbXnbqZFctbcfsLLMbCdnhQDNRXsrLCFSvCbhmzFPCrqKPzVpLV"
-              target="blank"
+              href="mailto:info.sdesignstudio@gmail.com"
             >
               <img src="images/home/icons/mail.png" alt="" />
             </a>
