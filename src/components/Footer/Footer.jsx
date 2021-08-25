@@ -21,7 +21,7 @@ function Footer({t}) {
                     <img className="icon-column-item" src="images/home/icons/footer-icons/viber.png" alt="" />
                     <p className="info-2-column-item">+37493050503</p>
 
-                    <p className="info-1-column-item">info.sdesignstudio@gmail.com</p>
+                    <p className="info-1-column-item"><a className="mail-link" href="mailto:info.sdesignstudio@gmail.com">info.sdesignstudio@gmail.com</a></p>
                     <img className="icon-column-item" src="images/home/icons/footer-icons/mail.png" alt="" />
                     <p className="info-2-column-item">sdesign.ijevan@gmail.com</p> 
                 </div>

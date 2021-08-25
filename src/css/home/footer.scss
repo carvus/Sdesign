@@ -36,6 +36,9 @@
   .footer-contacts {
     display: grid;
     grid-template-columns: max-content 25px auto;
+    @media (min-width: 768px) {
+      grid-template-columns: min-content 25px auto;
+    }
     grid-template-rows: repeat(4, max-content);
     grid-column-gap: 20px;
     grid-row-gap: 30px;

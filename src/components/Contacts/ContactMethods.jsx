@@ -16,7 +16,7 @@ function ContactMethods( { t } ) {
                 </div>
                 <div>
                     <img src="images/home/icons/footer-icons/mail.png" alt="" />
-                    <p>info.sdesignstudio@gmail.com</p>
+                    <p><a className="mail-link" href="mailto:info.sdesignstudio@gmail.com">info.sdesignstudio@gmail.com</a></p>
                 </div>
                 <div>
                     <img src="images/home/icons/footer-icons/phone.png" alt="" />
