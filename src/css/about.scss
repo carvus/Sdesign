@@ -7,7 +7,7 @@
   background-size: cover;
 
   &-us-text {
-    padding: 37px 122px 122px 122px;
+    padding: 37px 82px 122px 82px;
     background-color: rgba(20, 117, 162, 0.1);
     width: 48vw;
 
@@ -20,6 +20,14 @@
     p {
       text-align: justify;
     }
+  }
+}
+
+
+@media(min-width: 1660px){
+  .about-us-text{
+    padding: 3vh 14vw 6vw 6vw;
+    width: 54vw;
   }
 }
 

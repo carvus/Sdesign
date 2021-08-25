@@ -21,7 +21,7 @@
     }
   }
   .partners-logo {
-    width: 8%;
+    width: 5%;
   }
 }
 .awssld__bullets {
@@ -47,6 +47,9 @@
     .gallery-image:nth-last-of-type(3) {
       display: none;
     }
+  }
+  .partners-logo {
+    width: 7% !important;
   }
 }
 

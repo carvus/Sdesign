@@ -3,6 +3,10 @@
   flex-direction: column;
   position: relative;
 
+  h2 {
+    color: #0e5475;
+  }
+
   &.service-2 {
     h2 {
       margin-bottom: 22px;

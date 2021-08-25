@@ -78,6 +78,26 @@
   }
 }
 
+@media ( min-width: 769px ) {
+  .footer {
+    .our-works {
+      h3 {
+        padding-left: 12.1vw;
+      }
+    }
+  }
+}
+
+@media ( min-width: 1630px ) {  
+  .footer {
+    .our-works {
+      h3 {
+        padding-left: 9.1vw;
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .footer {
     font-size: 1.3vw;

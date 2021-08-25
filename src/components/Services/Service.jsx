@@ -27,7 +27,7 @@ function Service({ data, order, t }) {
                         {data.services.map((el, i) => <li style={{ textAlign: data.align, direction: data.align === "right" && "rtl" }} key={i}>{el}</li>)}
                     </ul>
                 </div>
-                <Link to="/gallery"><button className="seemore-btn">{t("get-familiar")} <span>→</span></button></Link>
+                <Link to="/gallery"><button className="seemore-btn">{t("get-familiar")}</button></Link>
             </div>
         </div>
     )
