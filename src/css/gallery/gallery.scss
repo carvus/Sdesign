@@ -6,9 +6,14 @@
     align-items: center;
     flex-direction: column;
     .section {
+      margin-bottom: 100px;
       h2 {
         font-size: 20px;
-        margin: 10px;
+        background: #1475A2;
+        text-align: center;
+        color: white;
+        margin-bottom: 70px;
+        padding: 6px;
       }
 
       .gallery-images {
