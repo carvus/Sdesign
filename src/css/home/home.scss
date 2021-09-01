@@ -27,21 +27,17 @@
 
     .prt-btn {
       border: none;
-      background: rgb(20, 117, 162, 0.6);
-      padding: 9px 20px 18px 21px;
+      background: #1475a2;
+      padding: 18px 20px 17px 21px;
       color: #fff;
       font-size: 18px;
       border-radius: 5px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       cursor: pointer;
-
-      span {
-        font-size: 30px;
-      }
     }
 
     .prt-btn:hover {
-      background: rgba(20, 117, 162, 0.3);
+      background: rgb(6, 35, 49);
     }
   }
 }
@@ -113,7 +109,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 400px) {
   .cover-page {
     height: 42vh !important;
     background-position: 100% !important;

@@ -9,7 +9,7 @@ function Service({ data, order, t }) {
     const img = useRef();
 
     useEffect(() => {
-        if (window.innerWidth <= 375) {
+        if (window.innerWidth <= 400) {
             const diffBetweenDescriptionAndImg = descriptionDiv.current.clientHeight - img.current.clientHeight;
             serviceDiv.current.style = `margin-bottom: ${diffBetweenDescriptionAndImg + 15}px !important;`;
         }

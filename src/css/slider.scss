@@ -62,9 +62,15 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 400px) {
   .awssld__container {
     padding-bottom: 10vh !important;
+  }
+  .awssld__bullets {
+    button {
+      width: 9px !important;
+      height: 9px !important;
+    }
   }
   .gallery-slide {
     .gallery-image:nth-last-of-type(2) {

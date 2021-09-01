@@ -19,7 +19,7 @@ function Partners({t}) {
     return (
         <div className="partners-slider">
             <h2>{t("mer-gortsnkerner")}</h2>
-            <AwesomeSlider organicArrows={false}>
+            <AwesomeSlider>
                 <div className="slide">
                     {partnersData && partnersData.data?.items?.map((el,i)=> <img src={GET_IMAGE(el.img)} key={i} alt="" className="partners-logo"/>)}
                 </div>

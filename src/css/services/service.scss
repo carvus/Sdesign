@@ -24,7 +24,6 @@
     font-size: 18px;
     background: none;
     border: 1px solid;
-    border-radius: 4px;
     cursor: pointer;
     font-weight: 400;
     width: max-content;
@@ -203,7 +202,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 400px) {
   .service {
     height: unset !important;
     position: relative;
@@ -257,8 +256,9 @@
 
     .seemore-btn {
       border: none;
-      font-size: 19px;
+      font-size: 14px;
       padding-left: 0px;
+      margin-top: -8px;
     }
     .seemore-btn:hover {
       color: #1475a2;
