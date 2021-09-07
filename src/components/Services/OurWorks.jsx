@@ -19,7 +19,7 @@ function OurWorks({ t }) {
             title: t("artaqin-govazd"),
             background: "images/serviceImages/bank.png",
             subTitle: t("service-2-subtitle"),
-            weAreDoing: t("Մենք առաջարկում  ենք  լուսային վահանակների , լուսային տառերի, տպագրական բաններների, ցուցանակների  ամբողջական փաթեթ հաճախորդին ՝"),
+            weAreDoing: t("Մենք առաջարկում  ենք  լուսային վահանակների , լուսային տառերի, տպագրական բաններների, ցուցանակների  ամբողջական փաթեթ հաճախորդին, այդ  թվում ՝"),
             services: t("service-2-items").split(`|`),
             align: "left"
         },
