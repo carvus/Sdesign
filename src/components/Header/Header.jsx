@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../css/header.scss";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { withI18n } from "react-i18next";
 
 function Header({ t, i18n }, props) {
@@ -22,13 +22,13 @@ function Header({ t, i18n }, props) {
         <div className="languages">
           <span
             onClick={() => changeLanguage(`hy`)}
-            className={`${currentLang === `hy` ? `active` : ``}`}
+            className={`${currentLang === `hy` ? `active-lang` : ``}`}
           >
             ARM
           </span>
           <span
             onClick={() => changeLanguage(`en`)}
-            className={`${currentLang !== `hy` ? `active` : ``}`}
+            className={`${currentLang !== `hy` ? `active-lang` : ``}`}
           >
             ENG
           </span>
@@ -37,36 +37,22 @@ function Header({ t, i18n }, props) {
           <nav>
             <ul>
               <li>
-                <Link to="/services" className="navbar-list-items">
+                <NavLink to="/services" className="navbar-list-items">
                   {t("tsarayutyunner")}
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link to="/gallery" className="navbar-list-items">
+                <NavLink to="/gallery" className="navbar-list-items">
                   {t("tesadaran")}
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link to="/contacts" className="navbar-list-items">
+                <NavLink to="/contacts" className="navbar-list-items">
                   {t("kontaktner")}
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </nav>
-          <div className="header-topbar-menu-languages">
-            <span
-              onClick={() => changeLanguage(`hy`)}
-              className={`${currentLang === `hy` ? `active` : ``}`}
-            >
-              ARM
-            </span>
-            <span
-              onClick={() => changeLanguage(`en`)}
-              className={`${currentLang !== `hy` ? `active` : ``}`}
-            >
-              ENG
-            </span>
-          </div>
         </div>
       </div>
     </div>

@@ -43,7 +43,6 @@ function ContactUsForm({ setIsOpenModal, setModalInfo, t }) {
         img: "images/red-x.png",
       });
     }
-    window.location.reload();
   };
 
   return (
